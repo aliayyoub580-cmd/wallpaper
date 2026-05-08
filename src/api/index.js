@@ -1,4 +1,15 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const envApiUrl = import.meta.env.VITE_API_URL;
+
+// If a build-time VITE_API_URL is provided and it's not the local dev default,
+// prefer that. Otherwise fall back to the browser origin at runtime so the
+// deployed frontend will call the same host that serves it (avoids calls to
+// `localhost:5000` from Vercel which causes `ERR_CONNECTION_REFUSED`).
+const API_URL =
+  envApiUrl && envApiUrl !== "http://localhost:5000"
+    ? envApiUrl
+    : typeof window !== "undefined"
+    ? `${window.location.protocol}//${window.location.host}`
+    : "http://localhost:5000";
 
 export function getApiUrl(path) {
   return `${API_URL}${path}`;
