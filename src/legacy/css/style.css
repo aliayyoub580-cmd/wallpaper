@@ -1,0 +1,216 @@
+body {
+  background-color: #191c22;
+  color: white;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+
+}
+
+.hero-section {
+  height: 400px;
+  background-image: url('/images/Hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.wallpaper-box {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s;
+}
+.wallpaper-box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Modals */
+.modal-content {
+  background-color: #222;
+  border-radius: 12px;
+}
+.modal-body input {
+  background-color: #2b2f3b;
+  color: white;
+  border: none;
+}
+.modal-body input:focus {
+  outline: none;
+  box-shadow: 0 0 4px yellow;
+}
+
+#nextBtn, #prevBtn {
+  min-width: 130px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#nextBtn:hover, #prevBtn:hover {
+  background-color: yellow;
+  color: black;
+}
+
+#nextBtn:disabled, #prevBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("/images/Hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 1;
+}
+
+/* Hero text and search box */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive search input */
+.hero-content .form-control {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 12px 20px;
+}
+
+.hero-content .btn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: black;
+  color: yellow;
+  transform: scale(1.05);
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+    background-position: center;
+
+  }
+  .sign
+  {
+    margin-top: 20px;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content .form-control {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #111418;
+  color: #ccc;
+}
+
+.footer h4, .footer h6 {
+  letter-spacing: 0.5px;
+}
+
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.footer-link:hover {
+  color: #ffc107;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffc107;
+  transform: translateY(-3px);
+}
+
+.footer hr {
+  opacity: 0.15;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer .text-warning {
+  color: #ffc107 !important;
+}
+
+footer .text-danger {
+  color: #ff4d4d !important;
+}
+
+footer .small.text-muted {
+  color: #aaa !important;
+}
+
+footer hr {
+  opacity: 0.2;
+}
+
+
+@media (max-width: 768px) {
+  .footer .text-md-start {
+    text-align: center !important;
+  }
+  .footer .social-icons {
+    margin-top: 10px;
+  }
+}
+
+
+.sign1:hover
+{
+  background-color:  #191c22;
+  color: white !important;
+}
